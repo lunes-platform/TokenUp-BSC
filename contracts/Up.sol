@@ -8,4 +8,8 @@ contract Up is ERC20 {
     constructor() ERC20("Up Coin", "UP") {
         _mint(msg.sender, 75000000 * (10**8));
     }
+
+     function decimals() public view virtual override returns (uint8) {
+        return 8;
+    }
 }
